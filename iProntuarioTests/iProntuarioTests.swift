@@ -20,10 +20,12 @@ class iProntuarioTests: XCTestCase {
     }
 
     func testExample() {
-        let viewController = MachineLearning()
-        let text = "apresenta os sintomas febre e alergia ."
+        let ml = MachineLearning()
+        let text = "O paciente tem 1 metro e 90 cm. Pesa aprox 98 kg. Apresenta os sintomas febre e alergia. Acredito que terá alta hoje"
         let arraySymptoms = ["sintomas","sintoma"]
-        let currentSymptoms: [String]? = viewController.getValueFromPrefix(type: String.self, arraySufix: arraySymptoms, text: text, delimiter: ".")
+        let currentSymptoms: [String]? = ml.getValueFromPrefix(type: String.self, arraySufix: arraySymptoms, text: text, delimiter: nil)
         print(currentSymptoms)
+        let processed = ml.processText(text: text)
+        print(processed)
     }
 }

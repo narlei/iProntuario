@@ -96,7 +96,7 @@ class ViewController: UIViewController {
             var isFinal = false
 
             if let result = result {
-                self.textView.text = MachineLearning().processText(text: result.bestTranscription.formattedString)
+                self.textView.text = "\(MachineLearning().processText(text: result.bestTranscription.formattedString))"
 
                 print("Reconhecido: \(result.bestTranscription.formattedString)")
                 isFinal = result.isFinal

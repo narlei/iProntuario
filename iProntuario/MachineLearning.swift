@@ -10,22 +10,37 @@ import Foundation
 
 class MachineLearning {
     
-    let arrayIgnoredExpressions = ["de","e","o","a","os","as"]
+    let arrayIgnoredExpressions = ["de","e","o","a","os","as",""," "]
     
-    func processText(text: String) -> String {
+    func processText(text: String) -> [String: Any?] {
+        var cleanText = text.replacingOccurrences(of: ".", with: " . ")
+        cleanText = cleanText.replacingOccurrences(of: ",", with: " . ")
+        
         let arrayWeight = ["peso", "quilos", "quilograma", "kg"]
-        let currentWeight: Double? = getValueFromSufix(arraySufix: arrayWeight, text: text)
+        let currentWeight: Double? = getValueFromSufix(arraySufix: arrayWeight, text: cleanText)
 
-        let arrayHeightMeter = ["metros", "m"]
-        let currentHeightMeter: Double? = getValueFromSufix(arraySufix: arrayHeightMeter, text: text)
+        let arrayHeightMeter = ["metros", "m", "metro"]
+        let currentHeightMeter: Double? = getValueFromSufix(arraySufix: arrayHeightMeter, text: cleanText)
 
         let arrayHeightCm = ["centimetros", "cm"]
-        let currentHeightCm: Double? = getValueFromSufix(arraySufix: arrayHeightCm, text: text)
+        let currentHeightCm: Double? = getValueFromSufix(arraySufix: arrayHeightCm, text: cleanText)
 
         let arraySymptoms = ["sintomas", "sintoma"]
-        let currentSymptoms: [String]? = getValueFromPrefix(type: String.self, arraySufix: arraySymptoms, text: text, delimiter: ".")
-
-        return "Achamos o peso = \(currentWeight ?? 0)\nAchamos a altura = \(currentHeightMeter ?? 0),\(currentHeightCm ?? 0)\nAchamos os sintomas = \(currentSymptoms ?? [""])"
+        let currentSymptoms: [String]? = getValueFromPrefix(type: String.self, arraySufix: arraySymptoms, text: cleanText, delimiter: ".")
+        
+        let arrayLeft = ["liberado", "alta"]
+        let currentLeft: [String]? = getValueFromPrefix(type: String.self, arraySufix: arrayLeft, text: cleanText, delimiter: nil)
+        
+        
+        let dicReturn = [
+            "weight": ["value": currentWeight ?? 0, "unit": "kg"],
+            "height": ["value": ((currentHeightMeter ?? 0) * 100) + (currentHeightCm ?? 0), "unit": "cm"],
+            "symptoms": currentSymptoms,
+            "full_text": text,
+            "left_day": currentLeft
+        ] as [String: Any?]
+        
+        return dicReturn
     }
 
     func getValueFromSufix<T>(arraySufix: [String], text: String) -> T? {
