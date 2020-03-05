@@ -14,9 +14,23 @@
             filePath = "iProntuario/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "185"
-            endingLineNumber = "185"
-            landmarkName = "getValueFromPrefix(arraySufix:text:)"
+            startingLineNumber = "215"
+            endingLineNumber = "215">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DA8561E5-CAC4-423E-96C5-10A767656EF5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iProntuarioTests/iProntuarioTests.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "testExample()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

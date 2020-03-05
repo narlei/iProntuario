@@ -13,7 +13,19 @@
 		9C15B14924113238003A81D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C15B14724113238003A81D4 /* Main.storyboard */; };
 		9C15B14B2411323A003A81D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C15B14A2411323A003A81D4 /* Assets.xcassets */; };
 		9C15B14E2411323A003A81D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C15B14C2411323A003A81D4 /* LaunchScreen.storyboard */; };
+		9C2FA76824115DA50014A979 /* iProntuarioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2FA76724115DA50014A979 /* iProntuarioTests.swift */; };
+		9C2FA770241161F20014A979 /* MachineLearning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C2FA76F241161F20014A979 /* MachineLearning.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9C2FA76A24115DA50014A979 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C15B13624113238003A81D4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C15B13D24113238003A81D4;
+			remoteInfo = iProntuario;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		9C15B13E24113238003A81D4 /* iProntuario.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iProntuario.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +36,21 @@
 		9C15B14A2411323A003A81D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C15B14D2411323A003A81D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C15B14F2411323A003A81D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C2FA76524115DA50014A979 /* iProntuarioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iProntuarioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C2FA76724115DA50014A979 /* iProntuarioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iProntuarioTests.swift; sourceTree = "<group>"; };
+		9C2FA76924115DA50014A979 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C2FA76F241161F20014A979 /* MachineLearning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineLearning.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		9C15B13B24113238003A81D4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C2FA76224115DA50014A979 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				9C15B14024113238003A81D4 /* iProntuario */,
+				9C2FA76624115DA50014A979 /* iProntuarioTests */,
 				9C15B13F24113238003A81D4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				9C15B13E24113238003A81D4 /* iProntuario.app */,
+				9C2FA76524115DA50014A979 /* iProntuarioTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -59,12 +84,22 @@
 				9C15B14124113238003A81D4 /* AppDelegate.swift */,
 				9C15B14324113238003A81D4 /* SceneDelegate.swift */,
 				9C15B14524113238003A81D4 /* ViewController.swift */,
+				9C2FA76F241161F20014A979 /* MachineLearning.swift */,
 				9C15B14724113238003A81D4 /* Main.storyboard */,
 				9C15B14A2411323A003A81D4 /* Assets.xcassets */,
 				9C15B14C2411323A003A81D4 /* LaunchScreen.storyboard */,
 				9C15B14F2411323A003A81D4 /* Info.plist */,
 			);
 			path = iProntuario;
+			sourceTree = "<group>";
+		};
+		9C2FA76624115DA50014A979 /* iProntuarioTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C2FA76724115DA50014A979 /* iProntuarioTests.swift */,
+				9C2FA76924115DA50014A979 /* Info.plist */,
+			);
+			path = iProntuarioTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -87,6 +122,24 @@
 			productReference = 9C15B13E24113238003A81D4 /* iProntuario.app */;
 			productType = "com.apple.product-type.application";
 		};
+		9C2FA76424115DA50014A979 /* iProntuarioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C2FA76E24115DA50014A979 /* Build configuration list for PBXNativeTarget "iProntuarioTests" */;
+			buildPhases = (
+				9C2FA76124115DA50014A979 /* Sources */,
+				9C2FA76224115DA50014A979 /* Frameworks */,
+				9C2FA76324115DA50014A979 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C2FA76B24115DA50014A979 /* PBXTargetDependency */,
+			);
+			name = iProntuarioTests;
+			productName = iProntuarioTests;
+			productReference = 9C2FA76524115DA50014A979 /* iProntuarioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -99,6 +152,10 @@
 				TargetAttributes = {
 					9C15B13D24113238003A81D4 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					9C2FA76424115DA50014A979 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 9C15B13D24113238003A81D4;
 					};
 				};
 			};
@@ -116,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				9C15B13D24113238003A81D4 /* iProntuario */,
+				9C2FA76424115DA50014A979 /* iProntuarioTests */,
 			);
 		};
 /* End PBXProject section */
@@ -131,6 +189,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C2FA76324115DA50014A979 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -139,12 +204,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C15B14624113238003A81D4 /* ViewController.swift in Sources */,
+				9C2FA770241161F20014A979 /* MachineLearning.swift in Sources */,
 				9C15B14224113238003A81D4 /* AppDelegate.swift in Sources */,
 				9C15B14424113238003A81D4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C2FA76124115DA50014A979 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C2FA76824115DA50014A979 /* iProntuarioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9C2FA76B24115DA50014A979 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C15B13D24113238003A81D4 /* iProntuario */;
+			targetProxy = 9C2FA76A24115DA50014A979 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		9C15B14724113238003A81D4 /* Main.storyboard */ = {
@@ -316,6 +398,46 @@
 			};
 			name = Release;
 		};
+		9C2FA76C24115DA50014A979 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQKT5G7NHC;
+				INFOPLIST_FILE = iProntuarioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nam.iProntuarioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iProntuario.app/iProntuario";
+			};
+			name = Debug;
+		};
+		9C2FA76D24115DA50014A979 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQKT5G7NHC;
+				INFOPLIST_FILE = iProntuarioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.nam.iProntuarioTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iProntuario.app/iProntuario";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -333,6 +455,15 @@
 			buildConfigurations = (
 				9C15B1532411323A003A81D4 /* Debug */,
 				9C15B1542411323A003A81D4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9C2FA76E24115DA50014A979 /* Build configuration list for PBXNativeTarget "iProntuarioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C2FA76C24115DA50014A979 /* Debug */,
+				9C2FA76D24115DA50014A979 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
